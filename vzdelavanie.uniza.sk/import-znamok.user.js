@@ -7,7 +7,7 @@
 // @match        https://vzdelavanie.uniza.sk/vzdelavanie/znpredmet.php?*
 // @icon         https://vzdelavanie.uniza.sk/favicon.ico
 // @grant        none
-// @require      https://raw.githubusercontent.com/janjanech/UserScripts/master/vzdelavanie.uniza.sk/_lib.js
+// @require      https://raw.githubusercontent.com/janjanech/UserScripts/af3d892864af53111fd59b98762f712e1d206871/vzdelavanie.uniza.sk/_lib.js
 // ==/UserScript==
 
 (function() {
