@@ -75,4 +75,4 @@ window.jj_ext = {
 
         dialog.showModal();
     }
-}
+};
