@@ -30,7 +30,7 @@ window.jj_ext = {
         let toolbar_button = document.createElement('input')
         toolbar_button.setAttribute("type", 'button')
         toolbar_button.setAttribute("class", 'tien')
-        toolbar_button.setAttribute("value", 'Import znamok z jsonu')
+        toolbar_button.setAttribute("value", label)
         toolbar_button.addEventListener("click", callback);
         toolbar.appendChild(toolbar_button);
     },
