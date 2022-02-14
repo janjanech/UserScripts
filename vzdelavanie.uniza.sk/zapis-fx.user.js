@@ -19,19 +19,29 @@
             let today = new Date();
             let datum = today.getDate() + '.'+ (today.getMonth()+1) + '.' + today.getFullYear();
             let pocet_zapisanych = 0;
+            let pocet_studentov = 0;
 
             for (let row of document.querySelectorAll('#znamkovanie tr:not(.hdr)')) {
-                let znamka_select = row.cells[5].querySelector('select');
-                let datum_input = row.cells[5].querySelector('input');
-                if (!znamka_select.value || znamka_select.value === '0') {
-                    datum_input.value = datum;
-                    znamka_select.value = 'FX';
-
-                    pocet_zapisanych++;
+                let zapisany = false;
+                for (let col = 5; col <= 7; col++) {
+                    let old_znamka = row.cells[col].querySelector('select').value;
+                    if (!old_znamka || old_znamka === '0') {
+                        let znamka_select = row.cells[col].querySelector('select');
+                        let datum_input = row.cells[col].querySelector('input');
+                        datum_input.value = datum;
+                        znamka_select.value = 'FX';
+                        pocet_zapisanych++;
+                        zapisany = true;
+                    } else if (old_znamka !== 'FX') {
+                        break;
+                    }
+                }
+                if (zapisany) {
+                    pocet_studentov++;
                 }
             }
 
-            alert(`Zapisanych ${pocet_zapisanych} FX`);
+            alert(`Zapisanych ${pocet_zapisanych} FX pre ${pocet_studentov} studentov`);
         }
     );
 })();
