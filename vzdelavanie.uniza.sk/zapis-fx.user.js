@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Zapis FX vzdelavanie
 // @namespace    https://vzdelavanie.uniza.sk/
-// @version      0.2
+// @version      0.2.1
 // @description  skript na zapisanie FX vsetkym studentom, ktori nemaju ziadnu znamku
 // @author       Jan Janech
 // @match        https://vzdelavanie.uniza.sk/vzdelavanie/znpredmet.php?*
