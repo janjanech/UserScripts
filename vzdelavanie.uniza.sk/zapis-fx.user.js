@@ -22,6 +22,10 @@
             let pocet_studentov = 0;
 
             for (let row of document.querySelectorAll('#znamkovanie tr:not(.hdr)')) {
+                if (temp1.querySelector("select") === null) {
+                    continue;
+                }
+                
                 let zapisany = false;
                 for (let col = 5; col <= 7; col++) {
                     let old_znamka = row.cells[col].querySelector('select').value;
