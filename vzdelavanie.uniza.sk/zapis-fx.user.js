@@ -22,7 +22,7 @@
             let pocet_studentov = 0;
 
             for (let row of document.querySelectorAll('#znamkovanie tr:not(.hdr)')) {
-                if (temp1.querySelector("select") === null) {
+                if (row.querySelector("select") === null) {
                     continue;
                 }
                 
