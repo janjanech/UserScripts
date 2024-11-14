@@ -53,7 +53,7 @@
 
         let data = JSON.parse(document.querySelector("#jj-json").value);
         for (let item of data) {
-            let request = `schoolroom_id=${rooms[item.room]}&user_id=${user_id}&alldayfrom=1.1.1900&alldayto=1.1.1900&from=${encodeURIComponent(item.from)}&to=${encodeURIComponent(item.to)}&reason=${encodeURIComponent(item.reason)}&save=Ulo%C5%BEi%C5%A5&created_id=${user_created_id}&_do=reservationForm-submit`;
+            let request = `schoolroom_id=${rooms[item.room]}&user_id=${user_id}&alldayfrom=1.1.1900&alldayto=1.1.1900&from=${encodeURIComponent(item.from)}&to=${encodeURIComponent(item.to)}&reason=${encodeURIComponent(item.reason)}&subject_code=${item.subject_code}&save=Ulo%C5%BEi%C5%A5&created_id=${user_created_id}&_do=reservationForm-submit`;
             let response = await fetch(
                 "/schoolrooms/admin/reservations/add",
                 {
